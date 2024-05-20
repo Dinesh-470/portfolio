@@ -83,7 +83,7 @@ USE_TZ = True
 
 
 STATIC_URL = 'static/'
-STATIC_ROOT = 'production/'
+STATIC_ROOT = BASE_DIR / 'production/'
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
