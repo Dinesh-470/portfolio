@@ -4,19 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dineshreddpy paidi</title>
-    <link rel="icon" href={% static "img/dinnu.jpg" %}>
+    <link rel="icon" href={% static "img/dinesh.jpg" %}>
     <link rel="stylesheet" href={% static "css/style.css" %}>
-    <style>
-        #element-1 {
-            background-color: lightgreen;
-            color: #000;
-            padding: 2px;
-        }
-        #element-1:hover {
-            background-color: green;
-            color: #fff;
-        }
-    </style>
+    {% block style-element %}
+    
+    {% endblock style-element %}
 </head>
 <body>
     <header id="header">
@@ -67,8 +59,10 @@
             </div>
         </a>
     </div>
-    <div class="main"></div>
+    <div class="main">
+        {% block main-content %}
         
+        {% endblock main-content %}
     </div>
     <script src={% static "js/index.js" %}></script>
 </body>
