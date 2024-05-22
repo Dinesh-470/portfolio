@@ -11,11 +11,25 @@
                     background-color: green;
                     color: #fff;
                 }
+                .main {
+                    height:400px;
+
+                }
             </style>
         {% endblock style-element %}
     </head>
     <body>
         {% block main-content %}
-            <h1>hello</h1>
+            <div class="about">
+                <h1>About</h1>
+                <hr>
+                    <p>Hello, <u>I'm Dinesh Reddy,</u>
+                        a passionate BTech student on a journey to refine my skills and cultivate a strong entrepreneurial mindset. 
+                        My goal is clear: I aim to not only excel academically but also to actively seek out opportunities that allow me to apply my knowledge in real-world scenarios. 
+                        Currently, I'm eagerly pursuing internships to augment my learning experience and gain invaluable practical insights. 
+                        I'm driven by a desire to continuously improve and contribute meaningfully to my field.
+                    </p>
+            </div>
+            
         {% endblock main-content %}
     </body>

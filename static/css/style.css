@@ -16,38 +16,35 @@ header {
     width: 100%;
     position: fixed;
     transition: height 0.7s ease;
-    height: 300px;
-    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
+    height: 240px;
+    box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.3);
     z-index: 999;
 }
 header .img-and-occ {
     display: grid;
     justify-content: center;
 }
-header img {
-    margin-top: 15px;
-    margin-bottom:2px;
-    margin-right: 10px;
-    margin-left: 15px;
-    height: 200px;
-    width: 200px;
+header .img-and-occ img {
+    margin-top: 20px;
     border-radius:50% ;
     border: 2px solid orange;
     object-fit: cover;
-    transition: height 1s ease;
+    transition: height 0.6s ease;
+    transition: width 0.61s ease;
 }
-
+header .img-and-occ h2 {
+    font-size: 18px;
+}
 .navigation-bar {
-    height:85px;
-    top:10px;
+    height:86px;
     width: 95%;
     margin-left: 2%;
     position: relative;
     background-color: darkgrey;
     border: 2px solid #000;
-    transition: margin-top 0.5s ease;
+    transition: margin-top 0.5s ease-in-out;
     border-radius: 30px;
-    box-shadow: 5px 10px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.2);
 
     display: flex;
     overflow: auto;
@@ -91,6 +88,27 @@ header img {
     margin-left: 1%;
     background-color: #fff;
     margin-top: 35px;
-    border: 1px solid  rgba(36, 36, 36, 0.2);
-    border-radius: 6px;
+    border: 1px solid  rgba(36, 36, 36, 0.3);
+    border-left: 5px solid #000;
+    border-bottom:  3px solid #000;;
+    border-radius: 7px;
+}
+
+.main .about {
+    margin-left:10px;
+    margin-top: 5px;
+}
+.main .about h1 {
+    margin:0px;
+    margin-left: 15px;
+}
+.main .about hr {
+    width: 98%;
+    margin-top: 0px;
+    border: 2px solid  rgba(36, 36, 36, 0.1);
+    
+}
+.main .about p {
+    font-size: 18px;
+    margin-left:20px;
 }
