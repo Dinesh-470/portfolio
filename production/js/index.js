@@ -1,22 +1,21 @@
 var header = document.getElementById('header');
 var img = document.getElementById("profilepic")
-var nav = this.document.getElementById('nav');
-nav.style.marginTop = '400px';
+var nav = document.getElementById('nav');
+nav.style.marginTop = '300px';
+img.style.height = '150px';
+img.style.width = '150px';
 
 function scrool() {
     if (window.scrollY > 1) {
-        header.style.height = '200px';
-        header.style.display = 'flex';
-        img.style.height = '120px';
-        img.style.width = '120px';
-        img.style.marginBottom = '0px';
-        nav.style.marginTop = '240px';
+        header.style.height = '180px';
+        img.style.height = '100px';
+        img.style.width = '100px';
+        nav.style.marginTop = '250px';
     } else {
-        header.style.height = '370px';
-        header.style.display = 'grid';
-        img.style.height = '200px';
-        img.style.width = '200px';
-        nav.style.marginTop = '400px';
+        header.style.height = '240px';
+        img.style.height = '150px';
+        img.style.width = '150px';
+        nav.style.marginTop = '300px';
     }
 }
 
