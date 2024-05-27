@@ -11,11 +11,31 @@
                     background-color: green;
                     color: #fff;
                 }
+                .main{
+                    max-width:700px;
+                }
             </style>
         {% endblock style-element %}
     </head>
     <body>
         {% block main-content %}
-            <h1>skills</h1>
+        <div class="skills">    
+            <h1>My - Skills</h1>
+            <hr>
+            <u><h3>Technical-skills</h3></u>
+            <div class="skills-all">
+                <a href="https://github.com/dinesh-470">
+                    {% for skill in skills %}
+                        <img src="https://skillicons.dev/icons?i={{skill}}" />
+                    {% endfor %}
+                </a>
+            </div>
+            <u><h3>Soft-skills</h3></u>
+            <div class="skills-all">
+                <ul>
+                    <li><h4>English</h4></li>
+                </ul>
+            </div>
+        </div>
         {% endblock main-content %}
     </body>

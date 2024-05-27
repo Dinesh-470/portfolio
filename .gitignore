@@ -1,11 +1,9 @@
 migrations
 __pycache__
+__init__.py
 
 /portfolio/__pycache__
 /portfolio/__init__.py
 /portfolio/migrations
 
 .env
-/main/__init__.py
-
-file.py

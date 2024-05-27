@@ -11,11 +11,30 @@
                     background-color: green;
                     color: #fff;
                 }
+                .main{
+                    max-width:500px;
+                }
             </style>
         {% endblock style-element %}
     </head>
     <body>
         {% block main-content %}
-            <h1>education</h1>
+            <div class="education">
+                <h1>education</h1>
+                <hr>
+                <div class="container">
+                    <div class="line">
+                    </div>
+                    <div class="block-all">
+                        {% for course in courses %}
+                            <div class="block">
+                                <h2>{{course.name}}</h2>
+                                <h3>{{course.course}}</h3>
+                                <p>GPA ==> {{course.percentage}}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>  
+            </div>
         {% endblock main-content %}
     </body>

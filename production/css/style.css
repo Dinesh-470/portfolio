@@ -83,7 +83,7 @@ header .img-and-occ h2 {
     margin-right: 10px;
 }
 .main {
-    height: 500px;
+    height: fit-content;
     width: 98%;
     margin-left: 1%;
     background-color: #fff;
@@ -94,21 +94,137 @@ header .img-and-occ h2 {
     border-radius: 7px;
 }
 
-.main .about {
+.main .about, .main .skills, .main .education,
+.main .contact, .main .learning, .main .resume, 
+.main .project,.main .social{
     margin-left:10px;
     margin-top: 5px;
 }
-.main .about h1 {
+.main .about h1, .main .skills h1 , .main .education h1,
+.main .contact h1,.main .learning h1, .main .resume h1,
+.main .project h1,.main .social h1{
     margin:0px;
     margin-left: 15px;
 }
-.main .about hr {
+.main .about hr, .main .skills hr, .main .education hr,
+.main .contact hr,.main .learning hr, .main .resume hr, 
+.main .project hr,.main .social hr{
     width: 98%;
     margin-top: 0px;
     border: 2px solid  rgba(36, 36, 36, 0.1);
-    
 }
+
 .main .about p {
     font-size: 18px;
     margin-left:20px;
+}
+.main .skills h3 {
+    margin-left: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+.main .skills .skills-all {
+    margin-top: 18px;
+    margin-left: 3%;
+    margin-bottom: 20px;
+    height:fit-content;
+    width: 95%;
+    display: flex;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+
+}
+.main .skills .skills-all a {
+    text-decoration: none;
+}
+.main .skills .skills-all img {
+    height: 60px;
+    width: 60px;
+    margin: 5px;
+    padding: 5px;
+    transition: padding 0.7 ease;
+}
+.main .skills .skills-all img:hover {
+    padding: 10px;
+    background-color: aliceblue;
+    height: 50px;
+    width: 50px;
+}
+.main .education .container {
+    display: flex;
+    position: relative;
+}
+.main .education .container .line {
+    position: absolute;
+    border: 5px solid #595959;
+    width: 0px;
+    height: calc(100% - 35px);
+    margin-left: 15px;
+    margin-top: 15px;
+}
+.main .education .container .block-all {
+    display: grid;
+}
+
+.main .education .container .block-all .block {
+    position: relative;
+    margin-top: 15px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    height:fit-content;
+    width: 100%;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+    border-left: 5px solid orange;
+    border-bottom: 2px solid orange;
+}
+
+.main .education .container .block-all .block::before {
+    content: "";
+    position: absolute;
+    top: 50%; 
+    left: -42px;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-color:tomato;
+    border-radius: 50%;
+}
+
+.main .education .container .block-all .block::after {
+    content: "";
+    position: absolute;
+    top: 50%; 
+    left: -27px; 
+    transform: translateY(-50%); 
+    width: 23px; 
+    height: 2px; 
+    background-color: orange; 
+}
+
+.main .education .container .block-all .block h2{
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    font-size: 22px;
+    color: #000;
+    font-family: 'Segoe UI', Tahoma;
+}
+.main .education .container .block-all .block h3 {
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-bottom: 0px;
+    font-size: 15px;
+    color:gray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+.main .education .container .block-all .block p {
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 15px;
+    padding: 8px;
+    font-family:monospace;
+    font-weight: bold;
+    margin-bottom: 2px;
 }

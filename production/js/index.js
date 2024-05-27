@@ -1,9 +1,9 @@
 var header = document.getElementById('header');
 var img = document.getElementById("profilepic")
 var nav = document.getElementById('nav');
-nav.style.marginTop = '300px';
-img.style.height = '150px';
-img.style.width = '150px';
+nav.style.marginTop = '280px';
+img.style.height = '140px';
+img.style.width = '140px';
 
 function scrool() {
     if (window.scrollY > 1) {
@@ -13,9 +13,9 @@ function scrool() {
         nav.style.marginTop = '250px';
     } else {
         header.style.height = '240px';
-        img.style.height = '150px';
-        img.style.width = '150px';
-        nav.style.marginTop = '300px';
+        img.style.height = '140px';
+        img.style.width = '140px';
+        nav.style.marginTop = '290px';
     }
 }
 

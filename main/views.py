@@ -14,7 +14,14 @@ def contact(request):
 
 def education(request):
     template = loader.get_template('education.html')
-    return HttpResponse(template.render())
+    data = {
+        'courses' : [
+            {'name' : 'Samskruthi eng. College','course' : 'B Tech (Data science) (2021-2025)','percentage' : '7.0',},
+            {'name' : 'SriSandepani jr. college','course' : 'Intermediate (2019-2021)','percentage' : '6.5',},
+            {'name' : 'Kanthi high school','course' : 'SSC (2009-2019)','percentage' : '9.8',},
+        ]
+    }
+    return HttpResponse(template.render(data,request))
 
 
 def learning(request):
@@ -24,7 +31,8 @@ def learning(request):
 
 def projects(request):
     template = loader.get_template('projects.html')
-    return HttpResponse(template.render())
+    data = {}
+    return HttpResponse(template.render(data,request))
 
 def resume(request):
     template = loader.get_template('resume.html')
@@ -32,7 +40,10 @@ def resume(request):
 
 def skills(request):
     template = loader.get_template('skills.html')
-    return HttpResponse(template.render())
+    data = {
+        'skills' : ['git','python','docker'],
+    }
+    return HttpResponse(template.render(data,request))
 
 def social(request):
     template = loader.get_template('social.html')
