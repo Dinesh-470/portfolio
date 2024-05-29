@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
     <head>
         {% block style-element %}
             <style>
@@ -11,6 +12,9 @@
                     background-color: green;
                     color: #fff;
                 }
+                .main {
+                    max-width:500px;
+                }
             </style>
         {% endblock style-element %}
     </head>
@@ -19,6 +23,18 @@
             <div class="project">    
                 <h1>Projects</h1>
                 <hr>
+                {% for project in projects %}
+                    <a href="{{project.project_id}}">
+                    <div class="container">
+                        <img src={% static "img/dinesh.jpg" %} alt="edo okati">
+                        <div class="block">
+                            <h3>{{project.project_name}}</h3>
+                            <hr>
+                            <p>{{project.short_description}}</p>
+                        </div>
+                    </div>
+                    </a>
+                {% endfor %}
             </div>
             <script>
                 const element = document.getElementById("element-4");

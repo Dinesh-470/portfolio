@@ -1,5 +1,4 @@
 body {
-    background-color: #fff;
     margin-top: 0px;
     line-height: 1.6;
     background-color: #f9f9f9;
@@ -15,7 +14,7 @@ header {
     left: 0;
     width: 100%;
     position: fixed;
-    transition: height 0.5s ease-in-out;
+    transition: height 0.3s ease-in-out;
     box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.3);
     z-index: 999;
 }
@@ -129,9 +128,8 @@ header .img-and-occ h2 {
     height:fit-content;
     width: 95%;
     display: flex;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
     border-radius: 7px;
-
+    box-shadow: 2px 2px 5px orange;
 }
 .main .skills .skills-all a {
     text-decoration: none;
@@ -141,7 +139,7 @@ header .img-and-occ h2 {
     width: 60px;
     margin: 5px;
     padding: 5px;
-    transition: padding 0.7 ease;
+    transition: padding 0.5 ease;
 }
 .main .skills .skills-all img:hover {
     padding: 10px;
@@ -227,4 +225,90 @@ header .img-and-occ h2 {
     font-family:monospace;
     font-weight: bold;
     margin-bottom: 2px;
+}
+
+.main .social .container {
+    height: 80px;
+    width: 95%;
+    margin-left: 2%;
+    max-width:450px;
+    background-color: #f9f7f7;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border: 1px solid  rgba(36, 36, 36, 0.3);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: margin-top 0.2 ease;
+    box-shadow: 2px 2px 5px orange;
+}
+
+.main .social .container:hover {
+    margin-top:25px ;
+    padding: 2px;
+    background-color:#fff;
+    box-shadow: -3px 3px 5px orange;
+}
+.main .social .container a {
+    text-decoration: none;
+}
+.main .social .container img {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+}
+.main .project a {
+    text-decoration: none;
+}
+.main .project .container {
+    height: 160px;
+    width: 95%;
+    margin-left: 2%;
+    background-color: #f9f7f7;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border: 1px solid  rgba(36, 36, 36, 0.3);
+    border-radius: 10px;
+    display: flex;
+    box-shadow: 2px 2px 5px orange;
+    overflow: hidden;
+}
+.main .project .container:hover {
+    margin-top:25px ;
+    padding: 2px;
+    background-color:#fff;
+    box-shadow: -3px 3px 5px orange;
+}
+.main .project .container img {
+    height: 140px;
+    width: 130px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px azure;
+}
+.main .project .container .block {
+    display: block;
+    margin-left: 25px;
+}
+.main .project .container .block h3 {
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    font-size: 22px;
+    color:#000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+}
+.main .project .container .block p {
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 18px;
+    padding: 5px;
+    font-family:monospace;
+    font-weight: bold;
+    margin-bottom: 2px;
+    color: #222;
 }

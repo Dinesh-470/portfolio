@@ -1,0 +1,38 @@
+<html>
+    {% load static %}
+    <head>
+        <link rel="stylesheet" href={% static "css/project.css" %}>
+    </head>
+    <body>
+        <div class="container">
+            <u><h1>{{project.project_name}}</h1></u>
+            <div class="links">
+                {% if project.deployed_link %}
+                <a href="">
+                    <h2>Deployment-link</h2>
+                </a>
+                {% endif %}
+                <a href="">
+                   <img src="https://skillicons.dev/icons?i=github">
+                </a>
+            </div>
+            <div class="center">
+                <div class="images">
+                    <img src="https://skillicons.dev/icons?i=github" alt="edo okati">
+                </div>
+            </div>
+            <h2>Skills-Used</h2>
+            <hr>
+            <div class="skills">
+                <img src="https://skillicons.dev/icons?i=git" />
+            </div>
+            <br>
+            <h2>Description</h2>
+            <hr>
+            <h4>{{project.description}}</h4>
+            <ul>
+                <li>point</li>
+            </ul>
+        </div>
+    </body>
+</html>

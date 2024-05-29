@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse,JsonResponse
 from django.template import loader
+from . import models
 # Create your views here.
 
 def index(request):
@@ -10,7 +11,6 @@ def index(request):
 def contact(request):
     template = loader.get_template('contact.html')
     return HttpResponse(template.render())
-
 
 def education(request):
     template = loader.get_template('education.html')
@@ -23,15 +23,24 @@ def education(request):
     }
     return HttpResponse(template.render(data,request))
 
-
 def learning(request):
     template = loader.get_template('learning.html')
     return HttpResponse(template.render())
 
-
 def projects(request):
     template = loader.get_template('projects.html')
-    data = {}
+    project = models.project.objects.all()[::-1]
+    print(project)
+    data = {
+        'projects' : project,
+        }
+    return HttpResponse(template.render(data,request))
+
+def project(request,project_name):
+    template = loader.get_template('project.html')
+    project_details = models.project.objects.get(project_id=project_name)
+    print(project_details)
+    data = {'project' : project_details}
     return HttpResponse(template.render(data,request))
 
 def resume(request):
@@ -47,4 +56,8 @@ def skills(request):
 
 def social(request):
     template = loader.get_template('social.html')
-    return HttpResponse(template.render())
+    social = models.social_links.objects.all()
+    data = {
+        'social' : social,
+    }
+    return HttpResponse(template.render(data,request))
