@@ -8,23 +8,31 @@
             <u><h1>{{project.project_name}}</h1></u>
             <div class="links">
                 {% if project.deployed_link %}
-                <a href="">
-                    <h2>Deployment-link</h2>
-                </a>
+                    <a href="{{project.deployed_link}}">
+                        <h2>Deployment-link</h2>
+                    </a>
+                {% else %}
+                    <a href="#"></a>
                 {% endif %}
-                <a href="">
+                <a href="{{project.github_link}}">
                    <img src="https://skillicons.dev/icons?i=github">
                 </a>
             </div>
             <div class="center">
                 <div class="images">
-                    <img src="https://skillicons.dev/icons?i=github" alt="edo okati">
+                    {% if image %}
+                        <img src= "/media/{{image.image}}" alt={{project.project_name}}>
+                    {% else %}
+                        <img src="https://skillicons.dev/icons?i=git">
+                    {% endif %}
                 </div>
             </div>
             <h2>Skills-Used</h2>
             <hr>
             <div class="skills">
-                <img src="https://skillicons.dev/icons?i=git" />
+                {% for skill in skills %}
+                    <img src="https://skillicons.dev/icons?i={{skill.skills_used}}" alt="{{skill.skills_used}}">
+                {% endfor %}
             </div>
             <br>
             <h2>Description</h2>

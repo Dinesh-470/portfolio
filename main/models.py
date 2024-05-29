@@ -14,7 +14,7 @@ class project(models.Model):
 
 class project_media(models.Model):
     project_id = models.ForeignKey(project,on_delete=models.CASCADE)  
-    image = models.ImageField()
+    image = models.ImageField(upload_to='project/')
     
     def __str__(self) -> str:
         return self.project_id.project_id
@@ -24,7 +24,7 @@ class project_skills(models.Model):
     skills_used = models.CharField(max_length=100)
     
     def __str__(self) -> str:
-        return self.project_id.project_id
+        return f'{self.skills_used} for {self.project_id.project_id}'
     
 class project_points(models.Model):
     project_id = models.ForeignKey(project,on_delete=models.CASCADE)
@@ -38,11 +38,11 @@ class social_links(models.Model):
     link = models.URLField()
     
     def __str__(self) -> str:
-        return self.link
+        return f'{self.link_logo} -> {self.link}'
     
 class learning_path(models.Model):
     date = models.CharField(max_length=100)
     message = models.TextField()
     
     def __str__(self):
-        return self.message
+        return f'{self.date} to {self.message}'

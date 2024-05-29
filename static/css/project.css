@@ -61,13 +61,14 @@ body {
     width: 300px;
     margin-left: 2%;
     border:1px solid #252525;
-    background-color: #000;
+    background-color: #252525;
     border-radius: 10px;
 }
 .container .center .images  img {
     height: 100%;
     width: 100%;
     border-radius: 10px;
+    object-fit: contain;
 }
 .container h2 {
     margin-top: 15px;
@@ -85,7 +86,6 @@ body {
     margin-bottom: 20px;
     height:fit-content;
     width: 95%;
-    display: flex;
     border-radius: 7px;
     box-shadow: 2px 2px 5px orange;
 }

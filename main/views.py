@@ -39,8 +39,16 @@ def projects(request):
 def project(request,project_name):
     template = loader.get_template('project.html')
     project_details = models.project.objects.get(project_id=project_name)
-    print(project_details)
-    data = {'project' : project_details}
+    skills = models.project_skills.objects.filter(project_id = project_details).all()
+    data = {'project' : project_details,
+            'skills' : skills,
+        }
+    try:
+        media = models.project_media.objects.get(project_id = project_details)
+        data['image'] = media
+    except:
+        media = ""
+    print(media)
     return HttpResponse(template.render(data,request))
 
 def resume(request):
@@ -50,7 +58,10 @@ def resume(request):
 def skills(request):
     template = loader.get_template('skills.html')
     data = {
-        'skills' : ['git','python','docker'],
+        'skills' : ['git','python','docker','aws','bootstrap',
+                    'django','github','githubactions','mysql',
+                    'php',
+                    'postgres','sqlite','vercel'],
     }
     return HttpResponse(template.render(data,request))
 
