@@ -39,7 +39,9 @@
             <hr>
             <h4>{{project.description}}</h4>
             <ul>
-                <li>point</li>
+                {% for point in points %}
+                    <p><li>{{point.key_points}}</p></li>
+                {% endfor %}
             </ul>
         </div>
     </body>

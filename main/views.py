@@ -30,7 +30,6 @@ def learning(request):
 def projects(request):
     template = loader.get_template('projects.html')
     project = models.project.objects.all()[::-1]
-    print(project)
     data = {
         'projects' : project,
         }
@@ -40,15 +39,16 @@ def project(request,project_name):
     template = loader.get_template('project.html')
     project_details = models.project.objects.get(project_id=project_name)
     skills = models.project_skills.objects.filter(project_id = project_details).all()
+    points = models.project_points.objects.filter(project_id = project_details).all()
     data = {'project' : project_details,
             'skills' : skills,
+            'points' : points,
         }
     try:
         media = models.project_media.objects.get(project_id = project_details)
         data['image'] = media
     except:
         media = ""
-    print(media)
     return HttpResponse(template.render(data,request))
 
 def resume(request):
