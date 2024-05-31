@@ -6,6 +6,7 @@
     <title>Dineshreddpy paidi</title>
     <link rel="icon" href={% static "img/dinesh.jpg" %}>
     <link rel="stylesheet" href={% static "css/style.css" %}>
+    {% block stylesheet %}{% endblock stylesheet %}
     {% block style-element %}
     
     {% endblock style-element %}
@@ -20,7 +21,7 @@
     <div class="navigation-bar" id="nav">
         <a href="/">
             <div class="container" id="element-1">
-                <h3>About Me</h3>
+                <h3>Intro</h3>
             </div>
         </a>
         <a href="/skills/">
@@ -50,14 +51,15 @@
         </a>
         <a href="/resume/">
             <div class="container" id="element-7">
-                <h3>Resume</h3>
+                <h3>Resume's</h3>
             </div>
         </a>
         <a href="/contact/">
             <div class="container" id="element-8">
-                <h3>ContactMe</h3>
+                <h3>Contact</h3>
             </div>
         </a>
+
     </div>
     <div class="main">
         {% block main-content %}

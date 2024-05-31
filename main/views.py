@@ -25,7 +25,11 @@ def education(request):
 
 def learning(request):
     template = loader.get_template('learning.html')
-    return HttpResponse(template.render())
+    learning = models.learning_path.objects.all()[::-1]
+    data = {
+        'learnings' : learning,
+    }
+    return HttpResponse(template.render(data,request))
 
 def projects(request):
     template = loader.get_template('projects.html')
