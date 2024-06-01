@@ -62,10 +62,22 @@ def resume(request):
 def skills(request):
     template = loader.get_template('skills.html')
     data = {
-        'skills' : ['git','python','docker','aws','bootstrap',
-                    'django','github','githubactions','mysql',
-                    'php',
-                    'postgres','sqlite','vercel'],
+        'skills' : [
+                    'py','django',
+                    'html','css','js','bootstrap',
+                    'git','github','githubactions',
+                    'mysql','postgres','sqlite','mongodb',
+                    'opencv','pandas','numpy','pytorch',
+                    'php','c','cpp','java',
+                    'docker','aws',
+                    'react',
+                    'vercel','netlify',
+                ],
+        'soft_skills' : [
+                    'speaking english',
+                    'Teamwork',
+                    'Dedication',
+                ]
     }
     return HttpResponse(template.render(data,request))
 

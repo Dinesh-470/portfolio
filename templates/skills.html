@@ -24,16 +24,18 @@
             <hr>
             <u><h3>Technical-skills</h3></u>
             <div class="skills-all">
-                <a href="https://github.com/dinesh-470">
+                <a href="https://github.com/dineshreddypaidi">
                     {% for skill in skills %}
-                        <img src="https://skillicons.dev/icons?i={{skill}}">
+                        <img src="https://go-skill-icons.vercel.app/api/icons?i={{skill}}">
                     {% endfor %}
                 </a>
             </div>
             <u><h3>Soft-skills</h3></u>
             <div class="skills-all">
                 <ul>
-                    <li><h4>English</h4></li>
+                    {% for skill in soft_skills %}
+                        <li><h4>{{skill}}</h4></li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>

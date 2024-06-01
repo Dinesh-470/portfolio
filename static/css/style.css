@@ -14,7 +14,7 @@ header {
     left: 0;
     width: 100%;
     position: fixed;
-    transition: height 0.3s ease-in-out;
+    transition: height 100ms ease-in-out;
     box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.3);
     z-index: 999;
 }
@@ -27,8 +27,8 @@ header .img-and-occ img {
     border-radius:50% ;
     border: 2px solid orange;
     object-fit: cover;
-    transition: height 0.3s ease-in-out;
-    transition: width 0.3s ease-in-out;
+    transition: height 100ms ease-in-out;
+    transition: width 100ms ease-in-out;
 }
 header .img-and-occ h2 {
     font-size: 18px;
