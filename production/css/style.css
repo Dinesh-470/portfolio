@@ -14,7 +14,7 @@ header {
     left: 0;
     width: 100%;
     position: fixed;
-    transition: height 0.3s ease-in-out;
+    transition: height 100ms ease-in-out;
     box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.3);
     z-index: 999;
 }
@@ -27,8 +27,8 @@ header .img-and-occ img {
     border-radius:50% ;
     border: 2px solid orange;
     object-fit: cover;
-    transition: height 0.3s ease-in-out;
-    transition: width 0.3s ease-in-out;
+    transition: height 100ms ease-in-out;
+    transition: width 100ms ease-in-out;
 }
 header .img-and-occ h2 {
     font-size: 18px;
@@ -99,13 +99,13 @@ header .img-and-occ h2 {
     margin-top: 5px;
 }
 .main .about h1, .main .skills h1 , .main .education h1,
-.main .contact h1,.main .learning h1, .main .resume h1,
+.main .contact h1, .main .resume h1,
 .main .project h1,.main .social h1{
     margin:0px;
     margin-left: 15px;
 }
 .main .about hr, .main .skills hr, .main .education hr,
-.main .contact hr,.main .learning hr, .main .resume hr, 
+.main .contact hr, .main .resume hr, 
 .main .project hr,.main .social hr{
     width: 98%;
     margin-top: 0px;
@@ -147,7 +147,7 @@ header .img-and-occ h2 {
     height: 50px;
     width: 50px;
 }
-.main .education .container {
+.main .education .container{
     display: flex;
     position: relative;
 }
