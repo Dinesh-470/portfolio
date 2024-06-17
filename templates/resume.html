@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
     <head>
         {% block style-element %}
             <style>
@@ -19,7 +20,7 @@
             <div class="resume">
                 <h1>Resume</h1>
                 <hr>
-                <a href="/media/resume/PAIDI DINESH REDDY.pdf" download="dineshreddy.pdf">
+                <a href={% static "resume/PAIDI_DINESHREDDY.pdf" %} download="dineshreddy.pdf">
                    <h1>Download My Resume</h1>
                 </a>
             </div>
