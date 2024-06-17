@@ -10,7 +10,10 @@ urlpatterns = [
     path('skills/',views.skills,name="skills"),
     path('social/',views.social,name="resume"),
     
+    #projects andp roject-details
     path('projects/',views.projects,name="projects"),
-    path('projects/<str:project_name>',views.project,)
-    #
+    path('projects/<str:project_name>',views.project),
+    
+    #404
+    path('404/',views.notfound,name='404'),
 ]

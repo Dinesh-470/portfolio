@@ -6,4 +6,9 @@ __init__.py
 /portfolio/__init__.py
 /portfolio/migrations
 
+/portfolio/__pycache__/urls.cpython-312.pyc
+
+
+
+
 .env

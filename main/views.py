@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.http import HttpResponse,JsonResponse
 from django.template import loader
 from . import models
@@ -16,7 +15,10 @@ def education(request):
     template = loader.get_template('education.html')
     data = {
         'courses' : [
-            {'name' : 'Samskruthi eng. College','course' : 'B Tech (Data science) (2021-2025)','percentage' : '7.0',},
+            {'name' : 'Samskruthi eng. College',
+             'course' : 'B Tech (Data science) (2021-2025)',
+             'percentage' : '7.0',
+            },
             {'name' : 'SriSandepani jr. college','course' : 'Intermediate (2019-2021)','percentage' : '6.5',},
             {'name' : 'Kanthi high school','course' : 'SSC (2009-2019)','percentage' : '9.8',},
         ]
@@ -88,3 +90,7 @@ def social(request):
         'social' : social,
     }
     return HttpResponse(template.render(data,request))
+
+def notfound(request,exception):
+    template = loader.get_template('404.html')
+    return HttpResponse(template.render())
