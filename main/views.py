@@ -1,6 +1,7 @@
 from django.http import HttpResponse,JsonResponse
 from django.template import loader
 from . import models
+from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 
 def index(request):
@@ -94,3 +95,48 @@ def social(request):
 def notfound(request,exception):
     template = loader.get_template('404.html')
     return HttpResponse(template.render())
+
+
+
+#api
+@csrf_exempt
+def projects_api(request):
+    projects = models.project.objects.all()
+    projectt = [{'project_id' : project.id, 'project_name' : project.project_name, 'description' : project.short_description} for project in projects]
+    return JsonResponse(projectt, safe=False)
+
+@csrf_exempt
+def skills_api(request):
+    data = {
+        'skills' : [
+                    'py','django',
+                    'html','css','js','bootstrap',
+                    'git','github','githubactions',
+                    'mysql','postgres','sqlite','mongodb',
+                    'opencv','pandas','numpy','pytorch',
+                    'php','c','cpp','java',
+                    'docker','aws',
+                    'react',
+                    'vercel','netlify',
+                ],
+        'soft_skills' : [
+                    'speaking english',
+                    'Teamwork',
+                    'Dedication',
+                ]
+    }
+    return JsonResponse(data,safe=False)
+
+@csrf_exempt
+def education_api(request):
+    data = {
+        'courses' : [
+            {'name' : 'Samskruthi eng. College',
+             'course' : 'B Tech (Data science) (2021-2025)',
+             'percentage' : '7.0',
+            },
+            {'name' : 'SriSandepani jr. college','course' : 'Intermediate (2019-2021)','percentage' : '6.5',},
+            {'name' : 'Kanthi high school','course' : 'SSC (2009-2019)','percentage' : '9.8',},
+        ]
+    }
+    return JsonResponse(data,safe=False)
